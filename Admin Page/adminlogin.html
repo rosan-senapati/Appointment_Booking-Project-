@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login & Registration Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="Background">
+        <div class="form_box">
+            <div class="button_box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="Register()">Sign In</button>
+            </div>
+            <form id="Login" class="input" action="adminlogin.php" method="post">
+                <input type="text" class="input-field" name="mobile" placeholder="Mobile No." required>
+                <input type="password" class="input-field" name="lpassword" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+
+            </form>
+            <form id="Register" class="input" action="adminregister.php" method="post" >
+                <input type="email" class="input-field" name="email" placeholder="Email ID">
+                <input type="text" class="input-field" name="name" placeholder="Enter Your name">
+                <input type="text" class="input-field" name="mobile" placeholder="Mobile No." required>
+                <input type="password" class="input-field" name="tpassword" placeholder="Create Password" required>
+                <input type="password" class="input-field" name="password" placeholder="Re-Enter Password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the Terms & Conditions</span>
+                <button type="submit" class="submit-btn">Sign In</button>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Register");
+        var z = document.getElementById("btn");
+
+        function Register(){
+            x.style.left = "-400px"
+            y.style.left = "50px"
+            z.style.left = "110px"
+        }
+
+        function Login(){
+            x.style.left = "50px"
+            y.style.left = "450px"
+            z.style.left = "0"
+        }
+    </script>
+
+
+</body>
+</html>
